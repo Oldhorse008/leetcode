@@ -57,7 +57,10 @@ int main()
     printf("p[0] 的地址：%d\n", p[0]);
     printf("P[0]的长度：%d\n", sizeof(p[0]));
     for (int i = 0; i < 15; i++)
+    {
         printf("answer[%d] = %s\n", i + 1, p[i]);
+        free(p[i]);
+    }
 
     free(p);
     return 0;
