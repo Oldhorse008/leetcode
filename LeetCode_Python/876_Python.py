@@ -39,6 +39,7 @@ def tolist(head: ListNode):
 a = creat_linklidt_tail([1, 2, 3, 4, 5])  # a即是链表的头部
 b = tolist(a)
 
+# 打印列表
 for i in range(len(b)):
     print(b[i])
 
