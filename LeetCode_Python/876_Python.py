@@ -17,8 +17,10 @@ def creat_linklidt_tail(li):
 
 
 # shift+tab整体取消缩进
+# 快慢指针，快指针行进永远是慢指针的两倍，快指针走完慢指针走一半
 def middleNode(head: ListNode):
     fast, slow = head, head
+    # 快指针和快指针的下一个节点都不为零，考虑到两个中间值的问题
     while fast and fast.next:
         slow = slow.next
         fast = fast.next.next
@@ -36,6 +38,7 @@ def tolist(head: ListNode):
 
 a = creat_linklidt_tail([1, 2, 3, 4, 5])  # a即是链表的头部
 b = tolist(a)
+
 for i in range(len(b)):
     print(b[i])
 
