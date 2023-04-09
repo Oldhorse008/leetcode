@@ -50,4 +50,5 @@ int main() {
     }
     // 打印链表中间值
     printf("链表的中间值为：%d\n", middleNode(head)->val);
+    free(head);
 }
