@@ -25,6 +25,18 @@ def middleNode(head: ListNode):
     return slow
 
 
+# 链表转为列表
+def tolist(head: ListNode):
+    res = []
+    while head:
+        res.append(head.val)
+        head = head.next
+    return res
+
+
 a = creat_linklidt_tail([1, 2, 3, 4, 5])  # a即是链表的头部
-print(middleNode(a).val)
-print(a.val)
+b = tolist(a)
+for i in range(len(b)):
+    print(b[i])
+print("链表的中间值为", middleNode(a).val)
+print("链表的头部为", a.val)
