@@ -68,32 +68,5 @@ def checkDistances(s: str, distance: list[int]) -> bool:
 
 
 s = "abaccb"
-distance = [
-    1,
-    3,
-    0,
-    5,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-]
+distance = [1, 3, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 print(checkDistances(s, distance))
