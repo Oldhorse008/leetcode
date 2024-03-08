@@ -1,15 +1,17 @@
-int search(int *nums, int numsSize, int target) {
-    int left = 0;
-    int right = numsSize - 1;
-    while (left <= right) {
-        int mid = (right + left) / 2;
-        if (nums[mid] > target) {
-            right = mid - 1;
-        } else if (nums[mid] < target) {
-            left = mid + 1;
-        } else {
-            return mid;
-        }
+#include <stdio.h>
+#include <stdlib.h>
+
+int compare(
+    const void *a, const void *b) {
+    return *(int *)b - *(int *)a;
+}
+
+int main() {
+    int a[] = {1, 4, 3, 3, 5, 20};
+    int length = sizeof(a) / sizeof(int);
+    qsort(a, length, sizeof(int), compare);
+    for (int i = 0; i < length; i++) {
+        printf("%d\n", a[i]);
     }
-    return -1;
+    return 0;
 }
